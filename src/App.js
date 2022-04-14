@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import First from './compo/first';
+import Scnd from './compo/scnd';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Third from './compo/third';
+import Stateprac from './compo/stateprac';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+<Stateprac/>
+
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<First/>}/>
+        <Route path='/add' element={<Scnd/>}/>
+
+      </Routes>
+      </BrowserRouter>
+      
+      
+
+
     </div>
   );
 }
