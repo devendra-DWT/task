@@ -11,7 +11,6 @@ export default function Third() {
   const dispatch = useDispatch();
 
   const handleDelete = (el) => {
-    console.log(el.rand);
     const rand = el.rand;
     dispatch(deleteAc({ rand }));
   };
